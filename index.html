@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!--bootstrap 복붙-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!--html이랑 css 파일 연결-->
     <link rel = "stylesheet" href = "style.css">
 </head>
 <body class = "container">
+    <!--시작 페이지-->
     <article class = "start">
         <h1 class = "mt-5 text"></h1>
         <img id = "img3" class = "text-center" src = "main.jpg" alt = "main">
@@ -16,16 +19,19 @@
             을지대 멋쟁이사자처럼에서 제작한 을지대 학과 적합 유형 Test입니다<br><br><br></p>
         <button type="button" class="btn btn startButton" onclick = 'start();'>Test 시작</button>
     </article>
+
+    <!--질문지 페이지-->
     <article class = "question">
-        <div class="progress mt-5">
-            <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)"></div>
+        <div class="progress mt-5"> <!--질문지 진행 퍼센테이지바-->
+            <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)"></div> 
         </div>
         <img id = "img1" class = "text" src = "q1.jpg" alt = "Question">
         <input id = "type" type = "hidden" value = "EI">
         <button id = "A" type="button" class="btn btn startButton">"test"</button>
         <button id = "B" type="button" class="btn btn mt-5 startButton">"test"</button>
     </article> 
-        
+
+    <!--MBTI 결과 페이지-->
     <article class = "result"> 
         <div class="main3">     
             <img id = "img" class="text mt-5" src = "istj.jpg" alt = "animal">
@@ -38,20 +44,22 @@
             </article>
         </div>
     </article>
+    <!--학과 매칭 결과 페이지-->
     <article>
-        <div class="main4">
+        <div class="main4"> <!--결과 페이지 속 결과 이미지 img2, img4, img5 연결-->
             <img id = "img2" class="text mt-5" src = "adong.jpg" alt = "hakgwa">
             <img id = "img4" class="text mt-5" src ="adong.jpg" alt = "hakgwa">
             <img id = "img5" class="text mt-5" src = "adong.jpg" alt = "hakgwa">
         
         </div>
     </article>
-
+    <!--카카오 광고-->
     <ins class="kakao_ad_area mt-5" style="display:none;" 
         data-ad-unit    = "DAN-th1GtFIJm1mURrsA" 
         data-ad-width   = "320" 
         data-ad-height  = "100"></ins> 
        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    <!--코드라이언 광고 필수 첨삭-->
     <a class = "mt-5 banner" href = "https://www.codelion.net/catalog/Q291cnNlTm9kZTpqbW9r?utm_source=animal_test&utm_medium=web_lecture&utm_campaign=jocoding">
         <img class = "banner-img" src = "banner.png" alt ="banner">
     </a> 
@@ -63,6 +71,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script>
+        //mbti 설문지 
         var num = 1;
         var q = {
             1 : {"img1": "q1.jpg", "type" : "EI", "A":"안녕!! 이름이 뭐야? 내 옆에 앉을래??", "B":"어어.. 응.. 간단히 대답하고 조용히 앉아 있는다"},
@@ -78,6 +87,7 @@
             11 : {"img1": "q11.jpg", "type" : "JP", "A": "6시 기상 및 외출 준비 7시출발 11시 점심 12시 ~~~... ", "B": "기상 밥 산책"},
             12 : {"img1": "q12.jpg", "type" : "JP", "A": "60%는 저축하고 40% 중에서 교통비를 제외한 금액에서 사고 싶었던 물건 구매하기", "B": "일단 사고 싶었던 물건들 바로 구매하기"},
         }
+        //mbti 결과 
         var result = {
             "ISTJ" : {"animal": "ISTJ", "explain":"청렴결백한 논리주의자", "img":"istj.jpg"},
             "ISFJ" : {"animal": "ISFJ", "explain":"용감한 수호자", "img":"isfj.jpg"},
@@ -96,7 +106,7 @@
             "ESTJ" : {"animal": "ESTJ", "explain":"엄격한 관리자", "img":"estj.jpg"},
             "ESFJ" : {"animal": "ESFJ", "explain":"사교적인 외교관", "img":"esfj.jpg"}   
         }
-   
+        //mbti 매칭 학과 결과
         var major1 = {
             "ISTJ" : {"일": "IT.jpg"},
             "ISFJ" : {"일": "adong.jpg"},  
@@ -152,7 +162,7 @@
             "ESFJ" : {"삼": "mullichi.jpg"}
         }
 
-        
+        //start() 함수가 호출되면, ".start"(시작 페이지)가 사라지고 ".question"(mbti 설문지 페이지)가 나타남
         function start(){
             $(".start").hide();
             $(".question").show();
@@ -167,21 +177,24 @@
         $("#B").click(function(){
             next();
         });
+        //next() 함수가 호풀되면 질문수 12개라 num == 13이 되면 ".question"(mbti 설문지 페이지)를 사라지게 하고, ".result"(mbti 결과 페이지)를 나타남
         function next(){
             if (num == 13 ){
                 $(".question").hide();
                 $(".result").show();
+                //mbti E/I의 질문수를 3개로 하여서 2보다 작은 값을 기준으로 mbti를 결정하는 부분
                 var mbti = "";
                ($("#EI").val() < 2) ? mbti+="I" : mbti+="E";
                ($("#SN").val() < 2) ? mbti+="N" : mbti+="S";
                ($("#TF").val() < 2) ? mbti+="F" : mbti+="T";
                ($("#JP").val() < 2) ? mbti+="P" : mbti+="J";
-                //alert(mbti);//
+               // 위에서 조건식으로 mbti가 예를 들어, ISFP로 결정되었다면, ISFP에 해당하는 이미지, mbti 결과(ISFP), mbti 간결한 설명
                 $("#img").attr("src",result[mbti]["img"]);
                 $("#animal").html(result[mbti]["animal"]);
                 $("#explain").html(result[mbti]["explain"]);
                 
             } 
+            // 설문지 페이지
             else {
                 $(".progress-bar").attr("style","width : calc(100/12*"+num+"%)");
                 $("#img1").attr("src",q[num]["img1"]);
@@ -191,17 +204,13 @@
                 num++;
             }
         }
+        // end() 함수가 호출되면, ".result"(mbti 결과 페이지)가 사라지고 ".main4"(mbti 학과 매칭 페이지)가 나타남
         var count ;
         function end(){
-            var mbti = "";
-               ($("#EI").val() < 2) ? mbti+="I" : mbti+="E";
-               ($("#SN").val() < 2) ? mbti+="N" : mbti+="S";
-               ($("#TF").val() < 2) ? mbti+="F" : mbti+="T";
-               ($("#JP").val() < 2) ? mbti+="P" : mbti+="J";
-        
+
             $(".result").hide();
             $(".main4").show();
-           
+            // mbti 학과 매칭 결과 3가지를 각각의 이미지 img2, img4, img5로 함.
             $("#img2").attr("src",major1[mbti]["일"]);
             $("#img4").attr("src",major2[mbti]["이"]);
             $("#img5").attr("src",major3[mbti]["삼"]);
@@ -209,7 +218,7 @@
         }
         
     </script>
-    
+    <!--광고 링크-->
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-62814a58a979026b"></script>
 
