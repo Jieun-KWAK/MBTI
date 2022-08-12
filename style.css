@@ -1,0 +1,83 @@
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+.startButton {
+    padding: 13px 50px;
+    border: 3px solid blue;
+    color: blue;
+    border-radius: 8px;
+}
+article {
+    display : flex;
+    flex-direction: column;
+}
+.question{
+    display : none;
+}
+.result {
+    display : none;
+}
+#img3{
+    display: flex;
+    width: 380px;
+    height: 350px;
+    margin : 0 auto;
+    justify-content: center;
+    
+}
+#img2{
+    display: flex;
+    width: 380px;
+    height: 350px;
+    margin : 0 auto;
+    justify-content: center;
+}
+#img4{
+    display: flex;
+    width: 380px;
+    height: 350px;
+    margin : 0 auto;
+    justify-content: center;
+}
+#img5{
+    display: flex;
+    width: 380px;
+    height: 350px;
+    margin : 0 auto;
+    justify-content: center;
+}
+#img1{
+    display: flex;
+    width: 380px;
+    height: 350px;
+    margin : 0 auto;
+    justify-content: center;
+}
+#img{
+    display: flex;
+    width: 300px;
+    height: 300px;
+    margin : 0 auto;
+    justify-content: center;
+}
+.ovr{
+    text-align : center;
+}
+
+.main4 {
+    display : none;
+    
+}
+.kakao_ad {
+    width:320px;
+    margin: 0 auto;
+}
+.banner {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    margin: 0 auto;
+}
+.banner-img {
+    width: 300px;
+}
